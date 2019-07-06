@@ -26,18 +26,22 @@ function _sumFibs( maxFibValue ) {
 
 let sum = _sumFibs();
 
-console.log('result: ');
-console.log(_sumFibs(13));
-console.log(sum);
-
 // bonus round
 function _highestFibonacciNumber (maxFibValue){
   let highest = 0;
 
   //define your base case, validate your input
 
+  let fibA = 0;
+  let fibB = 1;
+  let fibSum = 1;
 
-  //do your work here
+  while (fibSum <= maxFibValue) {
+    fibA = fibB;
+    fibB = fibSum;
+    fibSum = fibA + fibB;
+  }
+  highest = fibB;
 
   return highest;
 };
